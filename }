@@ -1,0 +1,13 @@
+---
+const headerLogo = "Sometimes always";
+---
+
+<header>
+	<h1>Header</h1>
+</header>
+
+<style>
+	header {
+		background: black;
+	}
+</style>
