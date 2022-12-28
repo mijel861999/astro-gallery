@@ -1,18 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-
+import Carousel from "../components/Carousel.astro";
 ---
 
 <Layout title="Gallery">
 	<main>
+		<Carousel />
+		<button id="buttonPass">Passar</button>
+		<div class="brands">
+			<div class="adidas">adidas Originals Confirmed</div>
+
+			<div class="graphic-design">Graphic Design</div>
+
+			<div class="brand-date">2020</div>
+			<div class="brand-colaborattors">
+				Collaborators: Tim Sonntag and many more
+			</div>
+			<div class="brand-info">+info</div>
+		</div>
 	</main>
 </Layout>
 
-<script>
-	console.log("Index");
-</script>
-
 <style>
-	
+	main {
+		width: auto;
+		height: 100px;
+		background: black;
+		margin: 10px;
+	}
+
+	.brands {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		font-size: 1.5rem;
+		font-weight: 800;
+	}
+
+	.brands .adidas {
+		grid-column: span 2;
+	}
+
+	.brands .graphic-design {
+		grid-column: span 1;
+	}
+
+	.brands .brand-date {
+		grid-column: span 1;
+	}
+
+	.brands .brand-colaborattors {
+		grid-column: span 5;
+	}
+
+	.brands .brand-info {
+		grid-column: span 3;
+	}
+
+	.brands div {
+		margin: 10px 0px;
+	}
 </style>
+
+<script>
+	const buttonPass = document.getElementById("buttonPass");
+
+	buttonPass.addEventListener("click", () => {
+		console.log("Pasar imagen");
+	});
+</script>
